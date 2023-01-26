@@ -1,0 +1,248 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  background-image: url("../multimedia/fondo.jpg");
+  background-size: cover;
+  background-position: top; }
+
+body {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em; }
+  header h1 {
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 5rem;
+    font-family: 'Pirata One', cursive; }
+  header .imagenH {
+    width: 15%;
+    margin-left: 2em; }
+    header .imagenH img {
+      width: 100%; }
+  @media screen and (max-width: 500px) {
+    header {
+      margin-top: 1em; }
+      header h1 {
+        font-size: 2rem;
+        margin-right: 0; }
+      header .imagenH {
+        width: 50%; } }
+  @media screen and (max-width: 900px) {
+    header h1 {
+      font-size: 3.5rem;
+      margin-left: 0.3em; }
+    header .imagenH {
+      width: 30%; } }
+
+nav {
+  color: white; }
+  nav input, nav label {
+    display: none; }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+    nav ul li a {
+      text-decoration: none;
+      color: #242424;
+      background-color: grey;
+      border-top: 0.3em solid #252525;
+      border-left: 0.3em solid #252525;
+      border-radius: 0.1em 1em;
+      padding: 1em;
+      -webkit-transition-property: color, border-left, border-top;
+      transition-property: color, border-left, border-top;
+      -webkit-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+      font-weight: bold; }
+      nav ul li a:hover, nav ul li a:active {
+        color: white;
+        border-left: 0.3em solid rgba(44, 44, 44, 0.527);
+        border-top: 0.3em solid rgba(44, 44, 44, 0.527); }
+  @media screen and (max-width: 500px) {
+    nav label {
+      display: block;
+      margin: 1em;
+      margin-bottom: 1.5em; }
+    nav input:checked ~ label::before {
+      content: "\e900"; }
+    nav ul {
+      display: none;
+      left: -12em; }
+    @-webkit-keyframes menu {
+      from {
+        left: -12em; }
+      to {
+        left: 1.3em; } }
+    @keyframes menu {
+      from {
+        left: -12em; }
+      to {
+        left: 1.3em; } }
+    nav input:checked ~ ul {
+      display: block;
+      left: 1.3em;
+      -webkit-animation-name: menu;
+              animation-name: menu;
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out; }
+    nav ul, nav input:checked ~ ul {
+      position: absolute;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: none;
+          -ms-flex-pack: none;
+              justify-content: none;
+      background-color: rgba(73, 73, 73, 0.747);
+      border-radius: 0.8em; }
+      nav ul li, nav input:checked ~ ul li {
+        margin: 1.5em; }
+        nav ul li a, nav input:checked ~ ul li a {
+          border-top: 0.3em solid rgba(44, 44, 44, 0.527);
+          border-left: 0.3em solid #252525;
+          padding: 0.3em;
+          color: white;
+          font-weight: bold; } }
+
+section {
+  margin: 1.5em;
+  margin-top: 3em;
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.4em;
+  font-weight: bold; }
+  section p {
+    margin: 0.5em; }
+  section span {
+    font-style: italic; }
+  section article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0.5em 0.5em 1.5em; }
+    section article .imagen {
+      width: 15%; }
+      section article .imagen img {
+        width: 100%; }
+    section article .info {
+      width: 85%;
+      padding: 0em 1em 1em; }
+      section article .info h2 {
+        margin: 0.2em 0.5em 0.5em;
+        font-style: italic; }
+      section article .info audio {
+        margin: 0.5em 1.1em; }
+  section iframe {
+    width: 560px;
+    height: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    padding: 1em; }
+  @media screen and (max-width: 500px) {
+    section {
+      font-size: 1rem; }
+      section article .imagen {
+        width: 30%; }
+      section article .info {
+        width: 70%; }
+        section article .info audio {
+          margin: 0.5em 0 0;
+          position: relative;
+          right: 2em; }
+      section iframe {
+        width: 250px;
+        height: 160px; } }
+
+footer {
+  padding: 1.5em; }
+  footer p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 2.5rem; }
+    footer p a {
+      text-decoration: none;
+      color: white; }
+      footer p a span, footer p a:hover span {
+        background-color: rgba(0, 0, 0, 0.418);
+        color: #bdbdbd;
+        border-radius: 0.5em;
+        margin: 0em 1em 1em;
+        padding: 0.3em;
+        position: absolute; }
+      footer p a span {
+        font-size: 0;
+        -webkit-transition-property: font-size;
+        transition-property: font-size;
+        -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+        -webkit-transition-delay: 0.7s;
+                transition-delay: 0.7s; }
+      footer p a:hover span {
+        font-size: 1rem; }
